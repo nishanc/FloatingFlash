@@ -20,6 +20,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -52,7 +53,16 @@ public class FlashService extends Service {
 			parameters = camera.getParameters();
 			isFlash = true;
 		}
-		
+//		WindowManager onlockscreen = (WindowManager) getSystemService(WINDOW_SERVICE);
+//		LayoutInflater minflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
+//		View mView = minflater.inflate(R.layout.floater_circle,null);
+//		WindowManager.LayoutParams mlayoutparams = new WindowManager.LayoutParams(
+//				ViewGroup.LayoutParams.WRAP_CONTENT,
+//				ViewGroup.LayoutParams.WRAP_CONTENT,0,0,
+//				WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY,
+//				WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED,
+//				WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+//		onlockscreen.addView(mView,mlayoutparams);
 	}
 
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
